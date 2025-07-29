@@ -1,0 +1,59 @@
+/**
+ * Fonts
+ */
+
+@font-face {
+    font-family: 'Jornada News Book';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src:
+        url('/dist/fonts/JornadaNews-Book.woff2') format('woff2'),
+        url('/dist/fonts/JornadaNews-Book.woff') format('woff'),
+        url('/dist/fonts/JornadaNews-Book.ttf') format('truetype'),
+        url('/dist/fonts/JornadaNews-Book.otf') format('opentype'),
+        url('/dist/fonts/JornadaNews-Book.svg') format('svg'),
+        url('/dist/fonts/JornadaNews-Book.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'Jornada Sans Book';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src:
+        url('/dist/fonts/JornadaSans-Book.woff2') format('woff2'),
+        url('/dist/fonts/JornadaSans-Book.woff') format('woff'),
+        url('/dist/fonts/JornadaSans-Book.ttf') format('truetype'),
+        url('/dist/fonts/JornadaSans-Book.otf') format('opentype'),
+        url('/dist/fonts/JornadaSans-Book.svg') format('svg'),
+        url('/dist/fonts/JornadaSans-Book.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'Jornada Sans Medium';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src:
+        url('/dist/fonts/JornadaSans-Medium.woff2') format('woff2'),
+        url('/dist/fonts/JornadaSans-Medium.woff') format('woff'),
+        url('/dist/fonts/JornadaSans-Medium.ttf') format('truetype'),
+        url('/dist/fonts/JornadaSans-Medium.otf') format('opentype'),
+        url('/dist/fonts/JornadaSans-Medium.svg') format('svg'),
+        url('/dist/fonts/JornadaSans-Medium.eot') format('embedded-opentype');
+}
+
+@font-face {
+    font-family: 'Jornada Slab Book';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src:
+        url('/dist/fonts/JornadaSlab-Book.woff2') format('woff2'),
+        url('/dist/fonts/JornadaSlab-Book.woff') format('woff'),
+        url('/dist/fonts/JornadaSlab-Book.ttf') format('truetype'),
+        url('/dist/fonts/JornadaSlab-Book.otf') format('opentype'),
+        url('/dist/fonts/JornadaSlab-Book.svg') format('svg'),
+        url('/dist/fonts/JornadaSlab-Book.eot') format('embedded-opentype');
+}

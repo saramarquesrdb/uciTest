@@ -1,0 +1,227 @@
+/**
+ * Base
+ */
+:root {
+  --site-background-color: var(--site-background-color, #fff);
+}
+
+/* Box sizing */
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+@media (--viewport-ms-max) {
+  html:not(.sticky) {
+    overflow-x: hidden;
+
+    body {
+      overflow-x: hidden;
+    }
+  }
+}
+
+/* Body */
+body {
+  background-color: var(--site-background-color);
+  font-family: var(--base-font-family);
+  font-weight: var(--base-font-weight);
+  font-size: var(--base-font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--color-text);
+  line-height: 1.5;
+  /* overflow-x: hidden; COMENTADO YA QUE PROVOCA ERROR EN FRACTAL CUANDO HAY QUE DESPLEGAR ALGO. LO CONSERVO PARA VERSIONES MOBILE PARA EVITAR PROBLEMAS CON EL MENU MOBILE (CA)*/
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  @media (--viewport-lg-min) {
+    font-size: 18px;
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+    content: '';
+
+    @media (--viewport-sm-min) {
+      transition: none;
+    }
+  }
+
+  &.mobile-menu-is-open,
+  &.active {
+    &::after {
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+  }
+}
+
+.container {
+  /* ===== Scrollbar CSS ===== */
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 100px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(25, 25, 25, 0.20);
+    border-radius: 4px;
+    border: 0;
+  }
+  *::-webkit-resizer {
+    display: none;
+  }
+  *::-webkit-scrollbar-button {
+    display: none;
+  }
+  /* Firefox */
+  @-moz-document url-prefix() {
+    scrollbar-color: rgba(25, 25, 25, 0.20) transparent;
+    scrollbar-width: thin;
+  }
+  
+}
+
+/* Horizontal ruler */
+hr {
+  border: none;
+  border-bottom: 1px solid var(--color-gray);
+  margin: 30px 0;
+}
+
+/* Image handling */
+figure {
+  margin: 0;
+  background-size: auto 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.2s;
+  }
+
+  &.contain-width img {
+    width: auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
+
+input {
+
+  &[type='checkbox'],
+  &[type='radio'] {
+    cursor: pointer;
+  }
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+label {
+  cursor: pointer;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+blockquote {
+  margin: 0;
+}
+
+img.lazyload:not([src]) {
+  visibility: hidden;
+}
